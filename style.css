@@ -95,6 +95,14 @@ a {
     border: 1px solid rgb(214, 214, 214);
 }
 
+#katsu-image {
+    max-height: 200px;
+}
+
+#stir-fry-image {
+    max-height: 250px;
+}
+
 .steps-list {
     text-align: justify;
 }
@@ -131,7 +139,8 @@ a {
     }
 
     .image-container {
-        max-width: 100%;
+        width: 100%;
+        max-width: none;
         display: flex;
         justify-content: center;
         align-items: center;

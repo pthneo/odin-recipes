@@ -9,21 +9,27 @@
 }
 
 html {
-    background-color: rgb(233, 233, 233);
-    background-image: url(bg.webp);
-    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: fit-content;
+    background-image: url(bg.webp);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-bottom: 50px;
 }
 
 .container {
     width: 60%;
     min-width: 250px;
+    min-height: 100%;
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
     padding: 50px;
@@ -72,7 +78,28 @@ a {
     font-weight: 400;
 }
 
-@media (max-width: 500px) {
+.ingredients {
+    max-width: 45%;
+    display: inline-block;
+}
+
+.image-container {
+    max-width: 49%;
+    float: right;
+    margin-top: 20px;
+}
+
+.recipe-image {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.steps-list {
+    text-align: justify;
+}
+
+@media (max-width: 700px) {
     .container {
         padding-left: 20px;
         padding-right: 20px;
@@ -101,5 +128,27 @@ a {
     .recipe {
         padding: 10px 20px;
         margin-bottom: 10px;
+    }
+
+    .image-container {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .recipe-image {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .ingredients {
+        max-width: 100%;
+        display: block;
+        padding-right: 10px;
+    }
+
+    .steps-list {
+        padding-right: 10px;
     }
 }
